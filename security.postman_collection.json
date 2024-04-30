@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "885ad383-2068-45c0-a54c-84a87e515908",
+		"name": "security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16660510"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8010/security/token/checkToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXl1ciIsImlhdCI6MTcxMzE2ODc4MSwiZXhwIjoxNzEzMTY4ODQxfQ.pK959vEnJaEGDWVEgS18WGeHaWhY0eUjk-eFIfeJj58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8010/security/token/checkToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"security",
+						"token",
+						"checkToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:8442/token/refreshtoken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXl1ciIsImlhdCI6MTcxMzQzMTc3MywiZXhwIjoxNzEzNDMxODMzfQ.0q-P2PEZE9vQFB3gPhM-FLNRUPGS-xPfydbIusgZBVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8442/token/refreshtoken",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8442",
+					"path": [
+						"token",
+						"refreshtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8060/token/generateToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"mayur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/token/generateToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"token",
+						"generateToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8090/token/refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tokenUniqueId\": \"a82085db-7329-4bd1-95b7-a37e07288974\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8090/token/refreshToken",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"token",
+						"refreshToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8442/token/create-refresh-token?username=mayur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:8442/token/create-refresh-token?username=mayur",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8442",
+					"path": [
+						"token",
+						"create-refresh-token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "mayur"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
